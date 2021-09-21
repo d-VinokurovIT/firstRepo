@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  Coordinators
-//
-//  Created by Денис Винокуров on 21.09.2021.
-//
-
 import UIKit
 
 class ViewController: UIViewController, Storyboarded {
@@ -25,4 +18,3 @@ class ViewController: UIViewController, Storyboarded {
     }
 
 }
-
