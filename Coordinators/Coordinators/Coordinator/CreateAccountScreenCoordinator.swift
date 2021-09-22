@@ -1,20 +1,26 @@
 import UIKit
 
-class CreateAccountScreenCoordinator: Coordinator {
-    
-    private let presenter: UINavigationController
+class CreateAccountScreenCoordinator: Coordinator, CreateAccountScreenRouter {
+
     private var createAccountViewController: CreateAccountViewController?
-    
-    init(presenter: UINavigationController) {
-        self.presenter = presenter
+    private var transitionHandler: TransitionHandler
+    private var childCoordinators = [Coordinator]()
+
+    init(transitionHandler: TransitionHandler) {
+        self.transitionHandler = transitionHandler
     }
-    
+
     func start() {
         let createAccountViewController = CreateAccountViewController(nibName: nil, bundle: nil)
-        createAccountViewController.title = "Create Account"
-        presenter.pushViewController(createAccountViewController, animated: true)
-        
-        self.createAccountViewController = createAccountViewController
+        createAccountViewController.title = "Create account view controller"
+        createAccountViewController.createAccountScreenCoordinator = self
+        transitionHandler.push(controller: createAccountViewController, animated: true)
     }
     
+    func navigateToBuy() {
+        let buyScreenCoordinator = BuyScreenCoordinator(transitionHandler: transitionHandler)
+        childCoordinators.append(buyScreenCoordinator)
+        buyScreenCoordinator.start()
+    }
+
 }

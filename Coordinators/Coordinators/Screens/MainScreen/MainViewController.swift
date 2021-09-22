@@ -1,20 +1,15 @@
 import UIKit
 
 class MainViewController: UIViewController {
-    
+
+    var mainScreenCoordinator: MainScreenRouter?
+
     @IBAction func buyButtonAction(_ sender: UIButton) {
-        if let presenter = self.navigationController {
-            let buyScreenCoordinator = BuyScreenCoordinator(presenter: presenter)
-            buyScreenCoordinator.start()
-        }
-        
+        mainScreenCoordinator?.navigateToBuyScreen()
     }
-    
+
     @IBAction func createAccountButtonAction(_ sender: UIButton) {
-        if let presenter = self.navigationController {
-            let createAccountScreenCoordinator = CreateAccountScreenCoordinator(presenter: presenter)
-            createAccountScreenCoordinator.start()
-        }
+        mainScreenCoordinator?.navigateToCreateAccountScreen()
     }
-    
+
 }

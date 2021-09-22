@@ -1,19 +1,19 @@
 import UIKit
 
 class BuyScreenCoordinator: Coordinator {
-    
-    private let presenter: UINavigationController
+
     private var buyViewController: BuyViewController?
-    
-    init(presenter: UINavigationController) {
-        self.presenter = presenter
+    private var transitionHandler: TransitionHandler?
+
+    init(transitionHandler: TransitionHandler) {
+        self.transitionHandler = transitionHandler
     }
-    
+
     func start() {
         let buyViewController = BuyViewController(nibName: nil, bundle: nil)
-        buyViewController.title = "Buy"
-        presenter.pushViewController(buyViewController, animated: true)
-        
+        buyViewController.title = "Buy view controller"
+        transitionHandler?.push(controller: buyViewController, animated: true)
         self.buyViewController = buyViewController
     }
+
 }

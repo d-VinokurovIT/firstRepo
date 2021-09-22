@@ -1,0 +1,3 @@
+protocol CreateAccountScreenRouter {
+    func navigateToBuy()
+}

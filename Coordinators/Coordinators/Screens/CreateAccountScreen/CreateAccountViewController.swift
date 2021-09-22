@@ -1,11 +1,11 @@
 import UIKit
 
 class CreateAccountViewController: UIViewController {
-    
+
+    var createAccountScreenCoordinator: CreateAccountScreenRouter?
+
     @IBAction func buyButtonAction(_ sender: Any) {
-        if let presenter = self.navigationController {
-            let buyScreenCoordinator = BuyScreenCoordinator(presenter: presenter)
-            buyScreenCoordinator.start()
-        }
+        createAccountScreenCoordinator?.navigateToBuy()
     }
+
 }

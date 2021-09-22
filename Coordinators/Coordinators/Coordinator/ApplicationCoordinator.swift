@@ -1,24 +1,20 @@
 import UIKit
 
 class ApplicationCoordinator: Coordinator {
-    
-    let window: UIWindow
-    let rootViewController: UINavigationController
-    let mainScreenCoordinator: MainScreenCoordinator
-    
-    init(window: UIWindow) {
-        self.window = window
-        rootViewController = UINavigationController()
-        rootViewController.navigationBar.prefersLargeTitles = true
-        
-        mainScreenCoordinator = MainScreenCoordinator(presenter: rootViewController)
+
+    var mainScreenCoordinator: MainScreenCoordinator?
+    let transitionHandler: TransitionHandler
+    private var childCoordinator = [Coordinator]()
+
+    init(transitionHandler: TransitionHandler) {
+        self.transitionHandler = transitionHandler
     }
-    
+
     func start() {
-        window.rootViewController = rootViewController
+        let mainScreenCoordinator = MainScreenCoordinator(transitionHandler: transitionHandler)
+        childCoordinator.append(mainScreenCoordinator)
         mainScreenCoordinator.start()
-        window.makeKeyAndVisible()
+        self.mainScreenCoordinator = mainScreenCoordinator
     }
-    
-    
+
 }
