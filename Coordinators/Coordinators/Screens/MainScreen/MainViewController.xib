@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="Coordinators" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="Z7i-Tv-3iB"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bpu-Hg-3NS">
+                    <rect key="frame" x="20" y="20" width="374" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="7J4-XW-ad2"/>
+                    </constraints>
+                    <state key="normal" title="Go to buy view controller"/>
+                    <connections>
+                        <action selector="buyButtonAction:" destination="-1" eventType="touchUpInside" id="nfS-ne-w6N"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VIk-3L-wOv">
+                    <rect key="frame" x="20" y="70" width="374" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="fQ2-sq-Rzn"/>
+                    </constraints>
+                    <state key="normal" title="Go to create account view controller"/>
+                    <connections>
+                        <action selector="createAccountButtonAction:" destination="-1" eventType="touchUpInside" id="7BF-3f-y0y"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="VIk-3L-wOv" firstAttribute="top" secondItem="bpu-Hg-3NS" secondAttribute="bottom" constant="20" id="5R7-jP-O6N"/>
+                <constraint firstItem="bpu-Hg-3NS" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="B56-07-NxZ"/>
+                <constraint firstItem="bpu-Hg-3NS" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="FDs-uY-7H2"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="VIk-3L-wOv" secondAttribute="trailing" constant="20" id="M1d-1p-Mm3"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="bpu-Hg-3NS" secondAttribute="trailing" constant="20" id="Y1F-RB-AEI"/>
+                <constraint firstItem="VIk-3L-wOv" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="fUv-CF-NsI"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="134"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
