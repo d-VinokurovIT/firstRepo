@@ -17,6 +17,8 @@
 		8F58D21126FA0F15003048FC /* MainScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F58D21026FA0F15003048FC /* MainScreenCoordinator.swift */; };
 		8F58D21326FA11EE003048FC /* BuyScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F58D21226FA11EE003048FC /* BuyScreenCoordinator.swift */; };
 		8F58D21526FA15B3003048FC /* CreateAccountScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F58D21426FA15B3003048FC /* CreateAccountScreenCoordinator.swift */; };
+		8F6C5F6026FB48AB00825323 /* MainScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6C5F5F26FB48AB00825323 /* MainScreenRouter.swift */; };
+		8F6C5F6226FB48F700825323 /* TransitionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6C5F6126FB48F700825323 /* TransitionHandler.swift */; };
 		8FF4A82F26F9B07600FCD078 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF4A82E26F9B07600FCD078 /* AppDelegate.swift */; };
 		8FF4A83826F9B07A00FCD078 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FF4A83726F9B07A00FCD078 /* Assets.xcassets */; };
 		8FF4A83B26F9B07A00FCD078 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FF4A83926F9B07A00FCD078 /* LaunchScreen.storyboard */; };
@@ -34,6 +36,8 @@
 		8F58D21026FA0F15003048FC /* MainScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenCoordinator.swift; sourceTree = "<group>"; };
 		8F58D21226FA11EE003048FC /* BuyScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyScreenCoordinator.swift; sourceTree = "<group>"; };
 		8F58D21426FA15B3003048FC /* CreateAccountScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountScreenCoordinator.swift; sourceTree = "<group>"; };
+		8F6C5F5F26FB48AB00825323 /* MainScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenRouter.swift; sourceTree = "<group>"; };
+		8F6C5F6126FB48F700825323 /* TransitionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionHandler.swift; sourceTree = "<group>"; };
 		8FF4A82B26F9B07600FCD078 /* Coordinators.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coordinators.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FF4A82E26F9B07600FCD078 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8FF4A83726F9B07A00FCD078 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -111,6 +115,15 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
+		8F6C5F5E26FB489400825323 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				8F6C5F5F26FB48AB00825323 /* MainScreenRouter.swift */,
+				8F6C5F6126FB48F700825323 /* TransitionHandler.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		8FF4A82226F9B07600FCD078 = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +143,7 @@
 		8FF4A82D26F9B07600FCD078 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
+				8F6C5F5E26FB489400825323 /* Protocols */,
 				8F58D20D26FA0999003048FC /* Application */,
 				8F58D1FC26FA07F5003048FC /* Screens */,
 				8F58D1FB26FA07EA003048FC /* Coordinator */,
@@ -214,6 +228,8 @@
 				8FF4A84326F9B09800FCD078 /* Coordinator.swift in Sources */,
 				8F58D21326FA11EE003048FC /* BuyScreenCoordinator.swift in Sources */,
 				8F58D21126FA0F15003048FC /* MainScreenCoordinator.swift in Sources */,
+				8F6C5F6026FB48AB00825323 /* MainScreenRouter.swift in Sources */,
+				8F6C5F6226FB48F700825323 /* TransitionHandler.swift in Sources */,
 				8F58D20826FA08D9003048FC /* BuyViewController.swift in Sources */,
 				8FF4A82F26F9B07600FCD078 /* AppDelegate.swift in Sources */,
 				8F58D20C26FA0937003048FC /* CreateAccountViewController.swift in Sources */,

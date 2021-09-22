@@ -4,6 +4,7 @@ class MainScreenCoordinator: Coordinator {
     
     private let presenter: UINavigationController
     private var mainViewController: MainViewController?
+    private var buyScreenCoordinator: BuyScreenCoordinator?
     
     init(presenter: UINavigationController) {
         self.presenter = presenter
